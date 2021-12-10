@@ -1,0 +1,34 @@
+
+@-moz-document url(about:home), url(about:newtab) , url(about:privatebrowsing){
+    .click-target-container *, .top-sites-list * {
+        color: #fff !important ;
+        text-shadow: 2px 2px 2px #222 !important ;
+    }
+    .search-handoff-button { 
+        background-color: rgba(0,0,0, 0.3) !important; 
+        
+    } 
+    .fake-textbox { 
+        color: transparent !important; 
+    } 
+    .top-site-outer .tile{ 
+        box-shadow: none !important;     
+        background-color: rgba(0,0,0, 0.1) !important;
+    }
+    .top-site-outer .top-site-icon{
+        background-color: transparent !important;
+    }
+    
+    body::before {
+        content: "" ;
+        z-index: -1 ;
+        position: fixed ;
+        top: 0 ;
+        left: 0 ;
+        background: #f9a no-repeat url(IMAGE-PATH) center ;
+		filter: blur(10px);
+        background-size: cover ;
+        width: 100vw ;
+        height: 100vh ;
+    }
+} 
